@@ -1,0 +1,20 @@
+{
+  "name": "untitled",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server ./public -c-1",
+    "predeploy": "echo \"123\"",
+    "deploy": "gh-pages -d public"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gh-pages": "^2.0.1",
+    "sass": "^1.21.0"
+  },
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  }
+}
