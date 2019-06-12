@@ -1,13 +1,21 @@
 {
-  "name": "untitled",
+  "name": "npm-demo",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "http-server ./public -c-1",
     "predeploy": "echo \"123\"",
-    "deploy": "gh-pages -d public"
+    "deploy": "gh-pages -d ./public",
+    "lint": "eslint ./public/**/*.js --fix"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alinaray/npm-demo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alinaray/npm-demo/issues"
+  },
+  "homepage": "https://github.com/alinaray/npm-demo#readme",
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -15,6 +23,16 @@
     "sass": "^1.21.0"
   },
   "devDependencies": {
-    "http-server": "^0.11.1"
-  }
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.3",
+    "http-server": "^0.11.1",
+    "husky": "^2.4.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "description": ""
 }

@@ -1,3 +1,8 @@
-'use strict';
+let x = 1;
 
-console.log(456);
+if (x > 12) { x += 1; }
+x += 1;
+function hello(name) {
+  return `Hello${name}`;
+}
+hello();
